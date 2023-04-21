@@ -1,5 +1,5 @@
-from cust import data
-from linmodel import LinModel
+from clientSide import data
+from linRegModel import LinModel
 import phe as paillier
 import json
 
