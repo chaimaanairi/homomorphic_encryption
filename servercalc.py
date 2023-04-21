@@ -1,3 +1,4 @@
+from cust import data
 from linmodel import LinModel
 import phe as paillier
 import json
@@ -34,4 +35,3 @@ def main():
 
 if __name__=='__main__':
 	main()
-

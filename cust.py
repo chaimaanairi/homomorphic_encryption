@@ -25,10 +25,10 @@ def serializeData(public_key, data):
 	return serialized
 
 def loadAnswer():
-    with open('answer.json', 'r') as file: 
-    ans=json.load(file)
-    answer=json.loads(ans)
-    return answer
+	with open('example.txt', 'r') as file:
+		data = file.read()
+		print(data)
+
 
 pub_key, priv_key = getKeys()
 data = age, he, al, gen = [24,4,6,1]
@@ -42,4 +42,3 @@ answer_key=paillier.PaillierPublicKey(n=int(answer_file['pubkey']['n']))
 answer = paillier.EncryptedNumber(answer_key, int(answer_file['values'][0]), int(answer_file['values'][1]))
 if (answer_key==pub_key):
     print(priv_key.decrypt(answer))
-	
